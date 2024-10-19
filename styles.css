@@ -351,6 +351,14 @@ footer p {
     .skills-list li {
         width: 100%;
     }
+
+    /* Ensure green dots show in other lists */
+    ul:not(nav ul) li::before {
+        display: inline-block; /* Show the green dots in lists outside the nav */
+        content: "•"; /* Replace with your preferred symbol or custom bullet */
+        color: green; /* Set color to green */
+        margin-right: 5px; /* Add spacing */
+    }
 }
 
 .logo {
