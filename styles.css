@@ -20,6 +20,7 @@ body {
     justify-content: space-between;
 } */
 
+
 nav ul {
     list-style-type: none;
     background-color: #161b22; /* Darker shade */
@@ -257,13 +258,20 @@ footer p {
     }
 
     nav ul {
+        display: flex; /* Add this line */
         flex-direction: column;
-        width: auto; /* Adjust width to auto for centering */
-        align-items: center; /* Center the list items */
+        /* width: 100%; */ /* Remove or comment out this line */
+        align-items: center;
+        padding: 0;
+        margin: 0;
     }
 
     nav ul li {
-        width: auto;
+        width: 100%; /* Ensure each list item takes full width */
+        display: flex;
+        justify-content: center; /* Center the content of each list item */
+        padding: 0; /* Remove any padding */
+        margin: 0; /* Remove any margin */
     }
 
     nav ul li a {
@@ -286,8 +294,8 @@ footer p {
 }
 
 .icon-offset {
-    width: 24px; /* Adjust width as needed */
-    height: 24px; /* Adjust height as needed */
-    vertical-align: middle;
-    margin-top: 2px; /* Adjust margin to offset down */
+    padding-top: 20px; /* Adjust the value as needed */
+    flex: 1; /* Allows the logo container to grow and fill available space */
+    display: flex;
+    justify-content: center;
 }
