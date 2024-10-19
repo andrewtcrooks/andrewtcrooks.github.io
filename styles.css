@@ -57,6 +57,7 @@ nav ul li a.active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
     padding: 80px 20px;
 }
 
@@ -68,26 +69,6 @@ nav ul li a.active {
 .hero p {
     font-size: 24px;
     margin-bottom: 30px;
-}
-
-.about .headshot-container {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px; /* Adjust the size as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    border-radius: 20%; /* Create a circular mask */
-    overflow: hidden; /* Hide the overflow */
-    margin-bottom: 10px;
-    position: relative;
-    border-radius: 20%; /* Create rounded corners */
-    transform: translateY(0px) translateX(-5px);
-}
-
-.headshot {
-    width: 105%;
-    height: 130%;
-    
-    object-fit: cover;
-    transform: translateY(-8px) translateX(-0px);
 }
 
 .cta {
@@ -247,6 +228,76 @@ footer p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.headshot-container {
+    flex: 1 1 250px;
+    max-width: 250px;
+    margin-right: 40px;
+}
+
+.headshot {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex: 3 1 600px;
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-content h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.education-list, .experience-list, .skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.education-list li, .experience-list li, .skills-list li {
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
 @media (max-width: 1080px) {
     nav {
         flex-direction: column;
@@ -284,6 +335,20 @@ footer p {
     ul li::before {
         display: none; /* Hide the green dots */
     }
+
+        .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headshot-container {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .skills-list li {
+        width: 100%;
+    }
 }
 
 .logo {
@@ -298,4 +363,32 @@ footer p {
     flex: 1; /* Allows the logo container to grow and fill available space */
     display: flex;
     justify-content: center;
+}
+
+/* Center the images within the portfolio cards */
+.portfolio-card {
+    text-align: left;
+}
+
+.portfolio-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center the header and image in the full-size page */
+.full-image {
+    text-align: center;
+}
+
+.full-image h2 {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.full-image img {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
