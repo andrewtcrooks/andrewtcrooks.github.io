@@ -1,0 +1,21 @@
+title: Andrew T Crooks | Data Analytics & Algo Trading Consulting
+description: Expert data analytics and algorithmic trading consulting services by Andrew T Crooks. Unlock business growth and automate financial strategies with data-driven solutions.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://datanovaconsulting.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude these files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yml
+  - README.md
