@@ -1,0 +1,22 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <title>Andrew T Crooks | Data Analytics & Algo Trading Consulting</title> -->
+        <title>{{ page.title }} | {{ site.title }}</title>
+        <!-- <meta name="description" content="Expert data analytics and algorithmic trading consulting services by Andrew T Crooks. Unlock business growth and automate financial strategies with data-driven solutions."> -->
+        <meta name="description" content="{{ site.description }}">
+        <meta name="keywords" content="data analytics, algorithmic trading, consulting, Andrew T Crooks, financial strategies, automation, data-driven solutions">
+        <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    </head>
+<body>
+    {% include header.html %}
+    <main>
+        {{ content }}
+    </main>
+    {% include footer.html %}
+    <script src="{{ '/highlight_button.js' | relative_url }}"></script>
+</body>
+</html>
