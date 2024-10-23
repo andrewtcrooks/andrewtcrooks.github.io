@@ -1,0 +1,435 @@
+/* General Styles for Dark Theme */
+
+/* Reserve space for the scrollbar */
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117; /* Dark background */
+    color: #c9d1d9; /* Light gray text */
+}
+
+/* Navigation Bar */
+/* nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+
+nav .site-title {
+    flex: 2;
+    text-align: center;
+    font-size: 38px; /* Adjust font size as needed */
+    color: #c9d1d9; /* Light gray text */
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #161b22; /* Darker shade */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #c9d1d9; /* Light gray */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #238636; /* Teal highlight */
+    color: white;
+    border: 2px solid #238636; /* Added border for active state */
+    padding: 8px 13px; /* Adjusted padding to compensate for border */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+    color: #c9d1d9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #238636; /* Teal highlight */
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta:hover {
+    background-color: #2ea043; /* Lighter teal */
+    transform: translateY(-3px);
+}
+
+/* Main Content Sections */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background-color: #161b22; /* Darker section background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #58a6ff; /* Bright blue for headers */
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: '•';
+    color: #238636; /* Teal bullet points */
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* Header */
+/* header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+} */
+
+/* Footer */
+footer {
+    background-color: #161b22; /* Dark footer */
+    color: #c9d1d9; /* Light gray text */
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #0d1117; /* Darker background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form h3 {
+    margin-bottom: 15px;
+    color: #58a6ff; /* Bright blue */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #c9d1d9;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #30363d;
+    background-color: #161b22; /* Input background */
+    color: #c9d1d9;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #238636; /* Teal button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #2ea043; /* Lighter teal */
+    transform: translateY(-3px);
+}
+
+/* Portfolio Card Styles */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-card {
+    padding: 20px;
+    background-color: #161b22;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.portfolio-card h3 {
+    color: #58a6ff; /* Bright blue */
+    margin-bottom: 10px;
+}
+
+.portfolio-card p {
+    color: #c9d1d9;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* About Section */
+.about {
+    /* padding: 60px 20px; */
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.about-content {
+    flex: 3 1 600px;
+    margin-left: 20px; /* Add margin to separate the content from the headshot */
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    /* color: #333; */
+}
+
+.about-content h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    /* color: #444; */
+    color: #58a6ff; /* Bright blue */
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    /* color: #555; */
+}
+
+.headshot-container {
+    flex: 1 1 250px;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+.headshot {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.education-list, .experience-list, .skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.education-list li, .experience-list li, .skills-list li {
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1080px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+    }
+
+    nav .site-title {
+        flex: 2;
+        text-align: center;
+        font-size: 38px; /* Adjust font size as needed */
+        color: #c9d1d9; /* Light gray text */
+    }
+
+    nav ul {
+        display: flex; /* Add this line */
+        flex-direction: column;
+        /* width: 100%; */ /* Remove or comment out this line */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        width: 100%; /* Ensure each list item takes full width */
+        display: flex;
+        justify-content: center; /* Center the content of each list item */
+        padding: 0; /* Remove any padding */
+        margin: 0; /* Remove any margin */
+    }
+
+    nav ul li a {
+        display: block;
+        width: auto;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    ul li::before {
+        display: none; /* Hide the green dots */
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        text-align: center; /* Center the text on smaller screens */
+    }
+
+    .headshot-container {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .skills-list li {
+        width: 100%;
+    }
+
+    /* Ensure green dots show in other lists */
+    ul:not(nav ul) li::before {
+        display: inline-block; /* Show the green dots in lists outside the nav */
+        content: "•"; /* Replace with your preferred symbol or custom bullet */
+        color: green; /* Set color to green */
+        margin-right: 5px; /* Add spacing */
+    }
+}
+
+.logo {
+    padding-top: 20px; /* Adjust the value as needed */
+    flex: 1; /* Allows the logo container to grow and fill available space */
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally within its container */
+}
+
+.icon-offset {
+    padding-top: 20px; /* Adjust the value as needed */
+    flex: 1; /* Allows the logo container to grow and fill available space */
+    display: flex;
+    justify-content: center;
+}
+
+/* Center the images within the portfolio cards */
+.portfolio-card {
+    text-align: left;
+}
+
+.portfolio-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center the header and image in the full-size page */
+.full-image {
+    text-align: center;
+}
+
+.full-image h2 {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.full-image img {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Define a basic height for the header and footer */
+#header, #footer {
+    min-height: 150px; /* Adjust to match the actual height of the header and footer */
+    background-color: #161b22; /* Match the background color of the header and footer */
+    display: none; /* Hide the actual header and footer initially */
+}
