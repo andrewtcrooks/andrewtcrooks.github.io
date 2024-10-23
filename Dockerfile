@@ -7,11 +7,17 @@ WORKDIR /srv/jekyll
 # Copy the Gemfile and Gemfile.lock
 COPY Gemfile Gemfile.lock ./
 
+# Ensure the correct permissions
+RUN chown -R jekyll:jekyll /srv/jekyll
+
 # Install dependencies
 RUN bundle install
 
 # Copy the rest of the application
 COPY . .
+
+# Ensure the correct permissions again
+RUN chown -R jekyll:jekyll /srv/jekyll
 
 # Expose port 4000 to access the site
 EXPOSE 4000
