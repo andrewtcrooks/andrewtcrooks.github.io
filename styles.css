@@ -327,6 +327,22 @@ footer p {
     transform: scale(1.03);
 }
 
+/* GitHub Code Link */
+.code-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.code-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
 /* About Page Styles */
 .about-container {
     display: grid;
