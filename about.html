@@ -53,7 +53,7 @@ title: About
         <h3>Technical Background & Projects</h3>
         <p class="section-intro">A selection of technical work that demonstrates my expertise in automation, data science, and software development.</p>
         
-        <div class="portfolio-container">
+        <div class="portfolio-container" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; row-gap: 6rem; margin-top: 2rem; align-items: start;">
             <div class="portfolio-card">
                 <h3>Custom AI Automation Project</h3>
                 <p>Developed an AI-powered workflow automation system that reduced manual data processing time by 85% for a small business client. Built using Python, API integrations, and custom natural language processing techniques.</p>
@@ -73,7 +73,7 @@ title: About
                 <h3>Instacart Market Basket Analysis</h3>
                 <a href="instacart.html">
                     <div class="image-container">
-                        <img src="{{ '/assets/images/instacart_wc.png' | relative_url }}" alt="Instacart Analysis Thumbnail" style="width:100%; max-width:220px;">
+                        <img src="{{ '/assets/images/instacart_wc.png' | relative_url }}" alt="Instacart Analysis Thumbnail" style="width:100%; max-width:220px; border-radius: 4px;">
                     </div>
                 </a>
                 <p>Analyzed Instacart's historical data to visualize item popularity using Python and R.</p>
@@ -89,5 +89,7 @@ title: About
                 <p>Developed Python programs to process high-resolution Hubble and Spitzer images, constraining magnitude errors of Lyman-alpha emitting galaxies. Utilized Monte Carlo simulations and classification techniques.</p>
             </div>
         </div>
+        
+        <div style="padding-bottom: 3rem;"></div>
     </div>
 </section>
