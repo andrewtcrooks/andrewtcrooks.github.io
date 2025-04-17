@@ -1,4 +1,59 @@
 <!-- footer.html -->
 <footer>
-    <p>© 2025 DataNova Consulting LLC. Custom AI solutions, no subscriptions. All rights reserved.</p>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/andrewtcrooks" target="_blank" class="social-link" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/andrew-crooks/" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:andrewtcrooks@gmail.com" class="social-link" aria-label="Email">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </div>
+            <p>© 2025 DataNova Consulting LLC. Custom AI solutions, no subscriptions. All rights reserved.</p>
+        </div>
+    </div>
 </footer>
+
+<style>
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .social-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: var(--muted-text);
+        transition: var(--transition);
+        font-size: 1.2rem;
+    }
+    .social-link:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-3px);
+    }
+    @media (max-width: 768px) {
+        .footer-content {
+            gap: 1rem;
+        }
+    }
+</style>
