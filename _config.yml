@@ -5,7 +5,7 @@ url: "https://datanovaconsulting.com" # the base hostname & protocol for your si
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima - removed to prevent theme CSS conflicts
 
 # Plugins
 plugins:

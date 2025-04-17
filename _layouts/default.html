@@ -10,6 +10,9 @@
         <meta name="description" content="{{ site.description }}">
         <meta name="keywords" content="ai automation, productivity tools, workflow automation, custom ai solutions, business process optimization, no subscription, data visualization, python automation">
         
+        <!-- CSS Variables - Must be loaded first -->
+        <link rel="stylesheet" href="{{ '/assets/css/variables.css' | relative_url }}">
+        
         <!-- Google Fonts - Professional Typography -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +21,8 @@
         <!-- Font Awesome - Professional Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         
-        <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+        <!-- Main stylesheet -->
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     </head>
 <body>
     {% include header.html %}
