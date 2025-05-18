@@ -29,6 +29,27 @@
         
         <!-- Main stylesheet -->
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+        
+        <meta property="og:title" content="AI Agents for Small Business | Supercharge Your Small Business with Automation & Custom AI Solutions">
+        <meta property="og:description" content="Supercharge your small business with AI agents, automation, custom AI solutions, and business process optimization. Unlock new efficiencies and growth with expert-built AI tools.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+        <meta property="og:image" content="{{ site.url }}/assets/images/logo_color_black_white_fill.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="AI Agents for Small Business | Supercharge Your Small Business with Automation & Custom AI Solutions">
+        <meta name="twitter:description" content="Supercharge your small business with AI agents, automation, custom AI solutions, and business process optimization. Unlock new efficiencies and growth with expert-built AI tools.">
+        <meta name="twitter:image" content="{{ site.url }}/assets/images/logo_color_black_white_fill.png">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "DataNova Consulting",
+          "url": "{{ site.url }}",
+          "logo": "{{ site.url }}/assets/images/logo_color_black_white_fill.png",
+          "description": "Supercharge your small business with AI agents, automation, custom AI solutions, and business process optimization.",
+          "sameAs": []
+        }
+        </script>
     </head>
 <body>
     {% include header.html %}
