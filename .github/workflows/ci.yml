@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Check HTML and links
+        run: |
+          bundle exec htmlproofer ./_site \
+            --ignore-urls "/calendly.com/,/fonts.googleapis.com/,/fonts.gstatic.com/,/cdnjs.cloudflare.com/,/umami.datanovaconsulting.com/" \
+            --ignore-status-codes "403,429" \
+            --allow-missing-href \
+            --no-enforce-https \
+            --swap-urls "^https://datanovaconsulting.com:/"
+
+  lint-css:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install stylelint
+        run: npm install stylelint stylelint-config-standard
+
+      - name: Lint CSS
+        run: npx stylelint "assets/css/**/*.css" --config .stylelintrc.json
+        continue-on-error: true
