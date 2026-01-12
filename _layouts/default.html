@@ -1,6 +1,6 @@
 <!-- _layouts/default.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +8,35 @@
         <meta name="description" content="{% if page.url == '/services.html' %}Professional custom AI system development services for small businesses. Complete OpenAI LLM and Mistral OCR integration with implementation, training, and support. Special launch offer: $5,000 (50% off).{% else %}{% if page.description %}{{ page.description }}{% else %}Transform your business with bespoke AI systems. Custom AI solutions with OpenAI LLM & Mistral OCR APIs. First 5 clients get 50% off - $5,000 (regular $10,000). Gain competitive advantage with intelligent automation.{% endif %}{% endif %}">
         <meta name="keywords" content="{% if page.url == '/services.html' %}custom AI system development, OpenAI LLM integration, Mistral OCR services, AI consulting services, business automation, workflow automation, document processing AI, predictive analytics services{% else %}{% if page.keywords %}{{ page.keywords }}{% else %}bespoke AI systems, custom AI solutions, OpenAI LLM API, Mistral OCR API, AI automation, competitive advantage, business transformation, AI consulting, machine learning, predictive analytics{% endif %}{% endif %}">
         <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-        
+
         <!-- Analytics Tracking -->
         <script
           defer
           data-website-id="07e3001e-01f6-43ca-a9e1-f14b20244bde"
           src="https://umami.datanovaconsulting.com/script.js"
         ></script>
-        
-        <!-- CSS Variables - Must be loaded first -->
-        <link rel="stylesheet" href="{{ '/assets/css/variables.css' | relative_url }}?v=2">
-        
-        <!-- Google Fonts - Professional Typography -->
+
+        <!-- CSS Variables -->
+        <link rel="stylesheet" href="{{ '/assets/css/variables.css' | relative_url }}?v=3">
+
+        <!-- Google Fonts - Cosmic Typography -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-        
-        <!-- Font Awesome - Professional Icons -->
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+        <!-- Fontshare - Satoshi -->
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome - Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        
+
         <!-- Main stylesheet -->
-        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=2">
-        
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=3">
+
         <link rel="icon" type="image/x-icon" href="/assets/images/logo_color/favicon.ico">
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo_color/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo_color/favicon-16x16.png">
-        
+
         <meta property="og:title" content="{% if page.url == '/services.html' %}Custom AI System Development Services | OpenAI LLM & Mistral OCR Integration | DataNova Consulting{% else %}{% if page.title %}{{ page.title }}{% else %}Bespoke AI Systems | Custom AI Solutions with OpenAI LLM & Mistral OCR APIs{% endif %}{% endif %}">
         <meta property="og:description" content="{% if page.url == '/services.html' %}Professional custom AI system development services for small businesses. Complete OpenAI LLM and Mistral OCR integration with implementation, training, and support. Special launch offer: $5,000 (50% off).{% else %}{% if page.description %}{{ page.description }}{% else %}Transform your business with bespoke AI systems. Custom AI solutions with OpenAI LLM & Mistral OCR APIs. First 5 clients get 50% off - $5,000 (regular $10,000). Gain competitive advantage with intelligent automation.{% endif %}{% endif %}">
         <meta property="og:type" content="website">
@@ -56,6 +59,14 @@
         </script>
     </head>
 <body>
+    <!-- Cosmic Background Effects -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="stars stars-2"></div>
+        <div class="stars stars-3"></div>
+        <div class="cosmic-gradient"></div>
+    </div>
+
     {% include header.html %}
     <main>
         {{ content }}
