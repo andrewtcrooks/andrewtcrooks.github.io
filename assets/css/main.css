@@ -37,9 +37,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    height: 100dvh; /* Dynamic viewport height for mobile */
     z-index: -1;
     overflow: hidden;
     background: var(--space-void);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .cosmic-gradient {
@@ -91,7 +94,7 @@ body {
     50% { opacity: 0.6; }
 }
 
-/* Grain Texture Overlay */
+/* Grain Texture Overlay - disabled on mobile for performance */
 body::before {
     content: '';
     position: fixed;
@@ -103,6 +106,24 @@ body::before {
     opacity: 0.03;
     pointer-events: none;
     z-index: 10000;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Disable grain and simplify stars on mobile */
+@media (max-width: 768px) {
+    body::before {
+        display: none;
+    }
+
+    .stars {
+        animation: none;
+        opacity: 0.5;
+    }
+
+    .stars-2, .stars-3 {
+        display: none;
+    }
 }
 
 /* === TYPOGRAPHY === */
