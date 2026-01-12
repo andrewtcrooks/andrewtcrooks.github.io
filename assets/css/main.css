@@ -2986,3 +2986,101 @@ footer p {
         margin: 0 auto var(--space-md);
     }
 }
+
+/* ============================================
+   SCHEDULE PAGE
+   ============================================ */
+
+.schedule-hero {
+    text-align: center;
+    padding: var(--space-2xl) var(--space-xl);
+    background: linear-gradient(135deg, var(--space-dark) 0%, var(--space-void) 100%);
+    border-radius: var(--radius-2xl);
+    margin-top: var(--space-xl);
+    border: 1px solid var(--border-subtle);
+    position: relative;
+    overflow: hidden;
+}
+
+.schedule-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--stellar-glow) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.schedule-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.schedule-hero h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-sm);
+    background: linear-gradient(135deg, var(--text-bright) 0%, var(--stellar-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.schedule-hero p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: var(--text-lg);
+}
+
+.schedule-container {
+    padding: var(--space-xl);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.calendly-embed {
+    background: var(--card-bg);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-subtle);
+    overflow: hidden;
+    padding: var(--space-md);
+}
+
+.calendly-inline-widget {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .schedule-hero {
+        padding: var(--space-xl) var(--space-md);
+    }
+    
+    .schedule-hero h1 {
+        font-size: var(--text-3xl);
+    }
+    
+    .schedule-container {
+        padding: var(--space-md);
+    }
+    
+    .calendly-embed {
+        padding: var(--space-sm);
+    }
+}
+
+.bundle-context {
+    color: var(--stellar-gold);
+    font-size: var(--text-base);
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: var(--radius-md);
+    display: inline-block;
+}
+
+.bundle-context strong {
+    color: var(--text-bright);
+}

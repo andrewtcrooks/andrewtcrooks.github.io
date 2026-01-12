@@ -1,0 +1,58 @@
+---
+layout: default
+title: Schedule a Discovery Call | DataNova Consulting
+description: Book a free 15-minute discovery call to discuss your self-hosted infrastructure or automation needs.
+---
+
+<section class="schedule-hero">
+    <h1>Book a Discovery Call</h1>
+    <p>15 minutes to figure out what you need. No pressure, no commitment.</p>
+    <p id="bundle-info" class="bundle-context" style="display: none;">Interested in: <strong id="bundle-name"></strong></p>
+</section>
+
+<section class="schedule-container">
+    <div class="calendly-embed">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" id="calendly-widget" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const bundle = params.get('bundle');
+
+    const bundleNames = {
+        'go_paperless_pro': 'Go Paperless Pro',
+        'business_ops': 'Business Ops',
+        'full_visibility': 'Full Visibility'
+    };
+
+    // Build Calendly URL with parameters
+    let calendlyUrl = 'https://calendly.com/datanovaconsulting?hide_gdpr_banner=1&background_color=1a1a2e&text_color=e2e8f0&primary_color=f59e0b';
+
+    if (bundle && bundleNames[bundle]) {
+        calendlyUrl += '&utm_source=website&utm_campaign=bundle_' + encodeURIComponent(bundle);
+
+        // Show bundle context using textContent (safe)
+        const bundleInfo = document.getElementById('bundle-info');
+        const bundleName = document.getElementById('bundle-name');
+        bundleName.textContent = bundleNames[bundle];
+        bundleInfo.style.display = 'block';
+    }
+
+    // Set the Calendly widget URL
+    const widget = document.getElementById('calendly-widget');
+    widget.setAttribute('data-url', calendlyUrl);
+
+    // Reinitialize Calendly widget
+    if (window.Calendly) {
+        Calendly.initInlineWidget({
+            url: calendlyUrl,
+            parentElement: widget
+        });
+    }
+});
+</script>
