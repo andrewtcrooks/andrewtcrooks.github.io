@@ -1176,7 +1176,7 @@ section p {
 
 .process-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xl);
 }
 
@@ -1624,8 +1624,13 @@ footer p {
 
     .stack-grid,
     .pricing-grid,
-    .faq-grid {
+    .faq-grid,
+    .process-steps {
         grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+        gap: var(--space-lg);
     }
 
     .services-hero h1 {
@@ -2007,8 +2012,8 @@ footer p {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm) var(--space-lg);
+    flex-direction: column;
+    gap: var(--space-sm);
 }
 
 .support-features li {
@@ -2062,7 +2067,7 @@ footer p {
     }
 
     .support-features {
-        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -2112,6 +2117,12 @@ footer p {
     padding: var(--space-2xl);
     text-align: center;
     transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card p {
+    flex-grow: 1;
 }
 
 .contact-card:hover {
@@ -2207,6 +2218,7 @@ footer p {
 
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-xl);
     }
 }
 
