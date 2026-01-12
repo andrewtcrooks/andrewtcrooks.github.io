@@ -1,134 +1,198 @@
 ---
 layout: default
-title: Self-Hosted Infrastructure Services | Docker Deployment & Configuration | DataNova Consulting
-description: Professional deployment of self-hosted business tools. Paperless-NGX, n8n workflow automation, monitoring, and more. Quick deployments from $500, full solutions from $1,500.
-keywords: self-hosted infrastructure, Paperless-NGX, n8n, Docker deployment, document management, workflow automation, business automation
+title: Self-Hosted Infrastructure Services | Docker & VM Deployments | DataNova Consulting
+description: Professional deployment of self-hosted business tools. Paperless-NGX, n8n, ERPNext, Mailcow, and more. App deployments from $149.99, custom builds $74.99/hr.
+keywords: self-hosted infrastructure, Paperless-NGX, n8n, ERPNext, Docker deployment, Mailcow, document management, workflow automation, business automation
 ---
 
 <section class="services-hero">
-    <h1>Self-Hosted Infrastructure Done Right</h1>
-    <p>Stop paying monthly SaaS fees for tools you could own. We deploy, configure, and hand off open-source business infrastructure that runs on your servers.</p>
+    <h1>Self-Hosted Infrastructure That Just Works</h1>
+    <p>You know what you want to run. We make it actually work. No Docker debugging, no env variable hell, no SSL headaches.</p>
 </section>
 
-<section class="stack-offerings">
+<section class="foundation-section">
     <div class="container">
-        <h2>What We Deploy</h2>
-        <p class="section-intro">Battle-tested open-source tools configured for your business. You own your data, forever.</p>
-
-        <div class="stack-grid">
-            <div class="stack-card">
-                <div class="stack-icon">
-                    <i class="fas fa-file-invoice"></i>
-                </div>
-                <h3>Document Management</h3>
-                <p class="stack-subtitle">Go Paperless</p>
-                <div class="stack-description">
-                    <p>Paperless-NGX with AI-powered OCR turns your paper chaos into a searchable digital archive. Scan, search, organize.</p>
-                </div>
-                <ul class="stack-features">
-                    <li><i class="fas fa-check"></i> Full-text search across all documents</li>
-                    <li><i class="fas fa-check"></i> AI text extraction (Mistral OCR)</li>
-                    <li><i class="fas fa-check"></i> Automatic tagging & organization</li>
-                    <li><i class="fas fa-check"></i> Scanner & email ingestion</li>
-                </ul>
+        <div class="foundation-card">
+            <div class="foundation-icon">
+                <i class="fas fa-shield-alt"></i>
             </div>
-
-            <div class="stack-card">
-                <div class="stack-icon">
-                    <i class="fas fa-sitemap"></i>
-                </div>
-                <h3>Workflow Automation</h3>
-                <p class="stack-subtitle">Automate the Repetitive</p>
-                <div class="stack-description">
-                    <p>n8n connects your tools and automates repetitive tasks. Visual workflow builder with 400+ integrations.</p>
-                </div>
-                <ul class="stack-features">
-                    <li><i class="fas fa-check"></i> Visual drag-and-drop builder</li>
-                    <li><i class="fas fa-check"></i> 400+ app integrations</li>
-                    <li><i class="fas fa-check"></i> Webhooks & scheduled triggers</li>
-                    <li><i class="fas fa-check"></i> Custom scripts when needed</li>
-                </ul>
-            </div>
-
-            <div class="stack-card">
-                <div class="stack-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Infrastructure Essentials</h3>
-                <p class="stack-subtitle">The Foundation</p>
-                <div class="stack-description">
-                    <p>Reverse proxy, SSL certificates, monitoring, analytics. The backbone that keeps everything running smoothly.</p>
-                </div>
-                <ul class="stack-features">
-                    <li><i class="fas fa-check"></i> Nginx Proxy Manager</li>
-                    <li><i class="fas fa-check"></i> Free SSL certificates</li>
-                    <li><i class="fas fa-check"></i> Uptime monitoring (Uptime Kuma)</li>
-                    <li><i class="fas fa-check"></i> Privacy-focused analytics (Umami)</li>
+            <div class="foundation-content">
+                <h2>Every Deployment Includes</h2>
+                <p class="foundation-subtitle">Secure remote access infrastructure, not just the app</p>
+                <ul class="foundation-features">
+                    <li><i class="fas fa-check"></i> <strong>Nginx Proxy Manager</strong> - route all your subdomains</li>
+                    <li><i class="fas fa-check"></i> <strong>SSL via Let's Encrypt</strong> - secure connections out of the box</li>
+                    <li><i class="fas fa-check"></i> <strong>Automatic certificate renewal</strong> - never worry about expired certs</li>
+                    <li><i class="fas fa-check"></i> <strong>Documentation</strong> - for YOUR specific setup</li>
+                    <li><i class="fas fa-check"></i> <strong>Training call</strong> - so you actually know how to use it</li>
+                    <li><i class="fas fa-check"></i> <strong>2 weeks support</strong> - questions answered, issues resolved</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
-<section class="pricing-section">
+<section class="apps-section">
     <div class="container">
-        <h2>Simple Pricing</h2>
-        <p class="section-intro">One-time fees. No subscriptions to us. Your servers, your data, your infrastructure.</p>
+        <h2>What We Deploy</h2>
+        <p class="section-intro">Pick what you need. We handle the rest.</p>
 
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>Quick Start</h3>
-                <div class="pricing-amount">
-                    <span class="price">$500</span>
+        <div class="apps-grid">
+            <!-- Document Management -->
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-file-invoice"></i></div>
+                    <div class="app-category">Document Management</div>
                 </div>
-                <p class="pricing-desc">Get up and running fast</p>
-                <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Single app deployment</li>
-                    <li><i class="fas fa-check"></i> Basic configuration</li>
-                    <li><i class="fas fa-check"></i> SSL & domain setup</li>
-                    <li><i class="fas fa-check"></i> 1-hour walkthrough call</li>
-                    <li><i class="fas fa-check"></i> 2 weeks email support</li>
-                </ul>
+                <h3>Paperless-NGX</h3>
+                <p>Turn paper chaos into a searchable digital archive. Scanner ingestion, email import, automatic organization.</p>
+                <div class="app-price">$399<sup class="cents">.99</sup></div>
+                <div class="app-addon">
+                    <span class="addon-label">+ Mistral OCR Integration</span>
+                    <span class="addon-price">+$199<sup class="cents">.99</sup></span>
+                </div>
+            </div>
+
+            <!-- Automation -->
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-sitemap"></i></div>
+                    <div class="app-category">Automation & Workflows</div>
+                </div>
+                <h3>n8n</h3>
+                <p>Visual workflow automation with 400+ integrations. License generation, verification workflows - stuff Stripe and ERPNext won't do for you.</p>
+                <div class="app-price">$349<sup class="cents">.99</sup></div>
+            </div>
+
+            <!-- Business Management -->
+            <div class="app-card featured">
+                <div class="app-badge">Full ERP</div>
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-building"></i></div>
+                    <div class="app-category">Business Management</div>
+                </div>
+                <h3>ERPNext</h3>
+                <p>Complete business management. Accounting, inventory, CRM, HR, manufacturing - all in one. VM deployment.</p>
+                <div class="app-price">$999<sup class="cents">.99</sup></div>
+            </div>
+
+            <!-- Email -->
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="app-category">Business Communication</div>
+                </div>
+                <h3>Mailcow</h3>
+                <p>Self-hosted business email. Webmail, calendars, contacts, spam filtering. Your domain, your data.</p>
+                <div class="app-price">$599<sup class="cents">.99</sup></div>
+            </div>
+
+            <!-- AI Chat - Open WebUI -->
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-robot"></i></div>
+                    <div class="app-category">AI Chat Infrastructure</div>
+                </div>
+                <h3>Open-WebUI + Qdrant</h3>
+                <p>ChatGPT-style interface for any LLM. Vector database for semantic search and knowledge bases.</p>
+                <div class="app-price">$499<sup class="cents">.99</sup></div>
+            </div>
+
+            <!-- AI Chat - AnythingLLM -->
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-brain"></i></div>
+                    <div class="app-category">AI Chat Infrastructure</div>
+                </div>
+                <h3>AnythingLLM + Qdrant</h3>
+                <p>All-in-one AI app. Chat with documents, build agents, connect any model. Vector DB included.</p>
+                <div class="app-price">$499<sup class="cents">.99</sup></div>
+            </div>
+
+            <!-- Monitoring -->
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div class="app-category">System Administration</div>
+                </div>
+                <h3>Uptime Kuma</h3>
+                <p>Know when servers go down before your users do. Real-time Telegram alerts. Sysadmin peace of mind.</p>
+                <div class="app-price">$149<sup class="cents">.99</sup></div>
+            </div>
+
+            <!-- Analytics -->
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="app-category">Business Analytics</div>
+                </div>
+                <h3>Umami</h3>
+                <p>Self-hosted website analytics. Track engagement without sending data to Google. Privacy-focused.</p>
+                <div class="app-price">$149<sup class="cents">.99</sup></div>
+            </div>
+
+            <!-- Security -->
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-key"></i></div>
+                    <div class="app-category">Security</div>
+                </div>
+                <h3>Bitwarden</h3>
+                <p>Enterprise password manager with SSO. Team credential sharing done right.</p>
+                <div class="app-price">$199<sup class="cents">.99</sup></div>
+            </div>
+
+            <!-- Custom -->
+            <div class="app-card custom-card">
+                <div class="app-header">
+                    <div class="app-icon"><i class="fas fa-tools"></i></div>
+                    <div class="app-category">Something Else?</div>
+                </div>
+                <h3>Custom Builds</h3>
+                <p>Got a Docker compose or specific tool in mind? Let's make it happen.</p>
+                <div class="app-price">$74<sup class="cents">.99</sup><span class="price-period">/hr</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bundles-section">
+    <div class="container">
+        <h2>Popular Bundles</h2>
+        <p class="section-intro">Common combinations, better prices.</p>
+
+        <div class="bundles-grid">
+            <div class="bundle-card">
+                <h3>Go Paperless Pro</h3>
+                <p>Paperless-NGX + Mistral OCR</p>
+                <div class="bundle-price">
+                    <span class="bundle-total">$549<sup class="cents">.99</sup></span>
+                    <span class="bundle-savings">Save $50</span>
+                </div>
                 <a href="https://calendly.com/datanovaconsulting" target="_blank" class="cta">Get Started</a>
             </div>
 
-            <div class="pricing-card featured">
-                <div class="pricing-badge">Most Popular</div>
-                <h3>Full Setup</h3>
-                <div class="pricing-amount">
-                    <span class="price">$1,500</span>
+            <div class="bundle-card featured">
+                <div class="bundle-badge">Best Value</div>
+                <h3>Business Stack</h3>
+                <p>Paperless-NGX + n8n + Mailcow</p>
+                <div class="bundle-price">
+                    <span class="bundle-total">$1,199<sup class="cents">.99</sup></span>
+                    <span class="bundle-savings">Save $150</span>
                 </div>
-                <p class="pricing-desc">Configured for your workflow</p>
-                <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Single app, fully configured</li>
-                    <li><i class="fas fa-check"></i> Custom rules, tags & workflows</li>
-                    <li><i class="fas fa-check"></i> SSL & domain setup</li>
-                    <li><i class="fas fa-check"></i> Team training session</li>
-                    <li><i class="fas fa-check"></i> 1 month priority support</li>
-                    <li><i class="fas fa-check"></i> Documentation for your setup</li>
-                </ul>
                 <a href="https://calendly.com/datanovaconsulting" target="_blank" class="cta cta-primary">Get Started</a>
             </div>
 
-            <div class="pricing-card">
-                <h3>Business Infrastructure</h3>
-                <div class="pricing-amount">
-                    <span class="price">$3,500</span>
+            <div class="bundle-card">
+                <h3>Sysadmin Essentials</h3>
+                <p>n8n + Uptime Kuma + Bitwarden</p>
+                <div class="bundle-price">
+                    <span class="bundle-total">$649<sup class="cents">.99</sup></span>
+                    <span class="bundle-savings">Save $50</span>
                 </div>
-                <p class="pricing-desc">Complete integrated system</p>
-                <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Multiple apps, integrated</li>
-                    <li><i class="fas fa-check"></i> Reverse proxy & monitoring</li>
-                    <li><i class="fas fa-check"></i> Cross-system automations</li>
-                    <li><i class="fas fa-check"></i> Full team training</li>
-                    <li><i class="fas fa-check"></i> 3 months priority support</li>
-                    <li><i class="fas fa-check"></i> Complete documentation</li>
-                </ul>
                 <a href="https://calendly.com/datanovaconsulting" target="_blank" class="cta">Get Started</a>
             </div>
         </div>
-
-        <p class="pricing-note"><strong>Server costs:</strong> You pay your hosting provider directly. We recommend Hetzner or Hostinger starting at ~$5-10/month.</p>
     </div>
 </section>
 
@@ -139,48 +203,22 @@ keywords: self-hosted infrastructure, Paperless-NGX, n8n, Docker deployment, doc
             <div class="step">
                 <div class="step-number">1</div>
                 <h3>Quick Call</h3>
-                <p>15 minutes to understand what you need. We'll recommend the right solution and give you a clear timeline.</p>
+                <p>15 minutes. What do you need? What server are you running? We'll confirm scope and timeline.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
                 <h3>We Deploy</h3>
-                <p>We set up everything on your server. You don't need to touch the command line.</p>
+                <p>We set everything up on your server. Docker, configs, SSL, the works. No command line for you.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
                 <h3>You Learn</h3>
-                <p>Walkthrough call to show you the ropes. You'll know exactly how to use your new tools.</p>
+                <p>Training call to show you the ropes. Plus documentation specific to your setup.</p>
             </div>
             <div class="step">
                 <div class="step-number">4</div>
                 <h3>We Support</h3>
-                <p>Questions come up - we're here. Every package includes support to get you comfortable.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="hourly-support">
-    <div class="container">
-        <h2>Need Just a Hand?</h2>
-        <p class="section-intro">Already have infrastructure? Just need help with something specific?</p>
-        <div class="support-card">
-            <div class="support-icon">
-                <i class="fas fa-headset"></i>
-            </div>
-            <div class="support-info">
-                <h3>Hourly Support</h3>
-                <p>Docker issues, configuration problems, adding new services, troubleshooting, optimization - book time when you need it.</p>
-                <ul class="support-features">
-                    <li><i class="fas fa-check"></i> Troubleshooting & fixes</li>
-                    <li><i class="fas fa-check"></i> New service deployment</li>
-                    <li><i class="fas fa-check"></i> Configuration changes</li>
-                </ul>
-            </div>
-            <div class="support-pricing">
-                <span class="price">$75</span><span class="period">/hour</span>
-                <p class="support-note">15-min free consultation</p>
-                <a href="https://calendly.com/datanovaconsulting" target="_blank" class="cta cta-primary">Book Time</a>
+                <p>2 weeks included support. Questions answered, issues fixed. Extended support available.</p>
             </div>
         </div>
     </div>
@@ -191,28 +229,28 @@ keywords: self-hosted infrastructure, Paperless-NGX, n8n, Docker deployment, doc
         <h2>Questions</h2>
         <div class="faq-grid">
             <div class="faq-item">
-                <h3>Do I need technical knowledge?</h3>
-                <p>No. We handle all the technical work. You just use the web interfaces - no command line required.</p>
+                <h3>Do I need my own server?</h3>
+                <p>Yes. Cloud VPS (Hetzner, Hostinger, DigitalOcean) or on-premise. We can recommend options starting at ~$5-10/month.</p>
             </div>
             <div class="faq-item">
-                <h3>Where does my data live?</h3>
-                <p>On a server you control. Cloud VPS, dedicated server, or on-premise - your choice. We never have ongoing access unless you grant it.</p>
+                <h3>What about ongoing server costs?</h3>
+                <p>You pay your hosting provider directly. Our fee is one-time for the deployment. You own everything.</p>
             </div>
             <div class="faq-item">
-                <h3>What if something breaks?</h3>
-                <p>Every package includes support. After that, hourly support is available, or you can fix it yourself - it's your server.</p>
+                <h3>Can I set this up myself?</h3>
+                <p>Probably. But do you want to spend 10-20 hours debugging Docker networking and env variables? We've done it hundreds of times.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What if I need something not listed?</h3>
+                <p>Custom builds at $74.99/hr. If it runs in Docker or a VM, we can probably deploy it.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer ongoing maintenance?</h3>
+                <p>Extended support packages available. Or book hourly time when you need it.</p>
             </div>
             <div class="faq-item">
                 <h3>Why not just use SaaS?</h3>
-                <p>Self-hosted means no monthly fees, no data leaving your control, no vendor lock-in. The upfront cost pays for itself in months.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What's the difference between tiers?</h3>
-                <p>Quick Start gets you running. Full Setup configures everything for your specific workflow. Business Infrastructure connects multiple systems together.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can I upgrade later?</h3>
-                <p>Absolutely. Start with one app, add more when you're ready. We'll credit what you've paid toward a larger package.</p>
+                <p>Self-hosted = no monthly fees, data stays yours, no vendor lock-in. Upfront cost pays for itself in months.</p>
             </div>
         </div>
     </div>
@@ -220,7 +258,7 @@ keywords: self-hosted infrastructure, Paperless-NGX, n8n, Docker deployment, doc
 
 <section class="services-final-cta">
     <div class="container">
-        <h2>Ready to Own Your Tools?</h2>
+        <h2>Ready to Own Your Infrastructure?</h2>
         <p>15-minute call to figure out what you need. No pressure, no commitment.</p>
         <div class="cta-group">
             <a href="https://calendly.com/datanovaconsulting" target="_blank" class="cta cta-primary cta-large">
