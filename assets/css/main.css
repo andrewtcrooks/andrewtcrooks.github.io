@@ -1053,7 +1053,7 @@ section p {
     padding: var(--space-2xl);
     position: relative;
     transition: var(--transition);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .stack-card::before {
