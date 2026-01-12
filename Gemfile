@@ -5,5 +5,5 @@ gem 'jekyll-feed', '~> 0.15'
 gem 'jekyll-seo-tag', '~> 2.7'
 
 group :test do
-  gem 'html-proofer', '~> 5.0'
+  gem 'html-proofer', '~> 4.4'
 end

@@ -4,8 +4,8 @@ FROM jekyll/jekyll:4.2.0
 # Set the working directory
 WORKDIR /srv/jekyll
 
-# Copy the Gemfile and Gemfile.lock
-COPY Gemfile Gemfile.lock ./
+# Copy the Gemfile (lock file is optional)
+COPY Gemfile ./
 
 # Ensure the correct permissions
 RUN chown -R jekyll:jekyll /srv/jekyll
