@@ -1562,6 +1562,13 @@ section p {
     font-weight: 400;
 }
 
+.price-note {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    margin-top: var(--space-xs);
+    font-style: italic;
+}
+
 .cents {
     font-size: 0.5em;
     vertical-align: super;
