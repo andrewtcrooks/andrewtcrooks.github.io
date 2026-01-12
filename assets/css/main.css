@@ -1554,6 +1554,12 @@ footer p {
     .hero p {
         font-size: var(--text-lg);
     }
+
+    /* Force single column on tablets and phones */
+    .stack-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
