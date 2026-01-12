@@ -1438,7 +1438,7 @@ section p {
 
 .foundation-features li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--space-sm);
     color: var(--text-primary);
     padding: 0;
@@ -1450,6 +1450,12 @@ section p {
 
 .foundation-features li i {
     color: var(--stellar-gold);
+    flex-shrink: 0;
+    margin-top: 0.2em;
+}
+
+.foundation-features li strong {
+    min-width: 180px;
     flex-shrink: 0;
 }
 
