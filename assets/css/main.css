@@ -1442,6 +1442,7 @@ section p {
     gap: var(--space-sm);
     color: var(--text-primary);
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .foundation-features li::before {
@@ -1455,8 +1456,14 @@ section p {
 }
 
 .foundation-features li strong {
-    min-width: 180px;
     flex-shrink: 0;
+}
+
+.foundation-features li span {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    width: 100%;
+    padding-left: calc(1em + var(--space-sm));
 }
 
 /* Apps Section */
