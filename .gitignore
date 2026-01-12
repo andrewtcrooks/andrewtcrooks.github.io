@@ -4,3 +4,6 @@ andrewtcrooks.github.io.code-workspace
 /.jekyll-cache
 logo_color.png
 node_modules/
+.playwright-mcp/
+.serena/
+*.bak
