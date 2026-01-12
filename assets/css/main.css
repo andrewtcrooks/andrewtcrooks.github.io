@@ -493,6 +493,9 @@ section p {
 
 .dual-offering {
     padding: var(--space-3xl) 0;
+    background: var(--space-dark);
+    position: relative;
+    z-index: 1;
 }
 
 .dual-offering .container {
@@ -595,9 +598,11 @@ section p {
 
 .tech-stack-bar {
     padding: var(--space-2xl) 0;
-    background: rgba(22, 22, 36, 0.3);
+    background: var(--space-void);
     border-top: 1px solid var(--border-subtle);
     border-bottom: 1px solid var(--border-subtle);
+    position: relative;
+    z-index: 1;
 }
 
 .tech-stack-bar .container {
@@ -666,6 +671,9 @@ section p {
 
 .featured-product {
     padding: var(--space-3xl) 0;
+    background: var(--space-deep);
+    position: relative;
+    z-index: 1;
 }
 
 .featured-product .container {
@@ -767,7 +775,9 @@ section p {
 
 .services-preview {
     padding: var(--space-3xl) 0;
-    background: rgba(22, 22, 36, 0.3);
+    background: var(--space-dark);
+    position: relative;
+    z-index: 1;
 }
 
 .services-preview .container {
@@ -854,6 +864,9 @@ section p {
 
 .why-us {
     padding: var(--space-3xl) 0;
+    background: var(--space-medium);
+    position: relative;
+    z-index: 1;
 }
 
 .why-us .container {
