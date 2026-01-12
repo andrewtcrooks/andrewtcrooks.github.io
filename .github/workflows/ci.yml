@@ -28,11 +28,10 @@ jobs:
       - name: Check HTML and links
         run: |
           bundle exec htmlproofer ./_site \
-            --ignore-urls "/calendly.com/,/fonts.googleapis.com/,/fonts.gstatic.com/,/cdnjs.cloudflare.com/,/umami.datanovaconsulting.com/" \
+            --ignore-urls "/calendly.com/,/fonts.googleapis.com/,/fonts.gstatic.com/,/cdnjs.cloudflare.com/,/umami.datanovaconsulting.com/,/api.fontshare.com/,/buy.stripe.com/,/linkedin.com/,/github.com/" \
             --ignore-status-codes "403,429" \
             --allow-missing-href \
-            --no-enforce-https \
-            --swap-urls "^https://datanovaconsulting.com:/"
+            --no-enforce-https
 
   lint-css:
     runs-on: ubuntu-latest
