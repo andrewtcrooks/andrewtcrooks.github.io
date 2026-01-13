@@ -3084,3 +3084,9 @@ footer p {
 .bundle-context strong {
     color: var(--text-bright);
 }
+
+/* Force dark mode on Calendly iframe */
+.calendly-inline-widget iframe {
+    filter: invert(0.88) hue-rotate(180deg);
+    border-radius: var(--radius-lg);
+}
