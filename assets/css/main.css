@@ -3086,7 +3086,9 @@ footer p {
 }
 
 /* Force dark mode on Calendly iframe */
-.calendly-inline-widget iframe {
-    filter: invert(0.88) hue-rotate(180deg);
+.calendly-inline-widget iframe,
+.calendly-embed iframe,
+.schedule-container iframe {
+    filter: invert(0.88) hue-rotate(180deg) !important;
     border-radius: var(--radius-lg);
 }
