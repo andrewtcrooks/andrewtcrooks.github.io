@@ -3089,6 +3089,6 @@ footer p {
 .calendly-inline-widget iframe,
 .calendly-embed iframe,
 .schedule-container iframe {
-    filter: invert(0.88) hue-rotate(180deg) !important;
+    filter: invert(0.9) hue-rotate(180deg) saturate(2) !important;
     border-radius: var(--radius-lg);
 }
