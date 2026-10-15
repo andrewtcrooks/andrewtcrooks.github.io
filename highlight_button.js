@@ -1,105 +1,40 @@
+// Nav highlighting for the single-page site. Never intercepts clicks:
+// anchor links (/#pricing), tel: links and normal pages all behave natively.
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the current URL path
-    const currentPath = window.location.pathname;
-
-    // Highlight the matching navigation link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+    var byHash = {};
+    links.forEach(function (link) {
+        var href = link.getAttribute('href') || '';
+        var i = href.indexOf('#');
+        if (i !== -1 && href.slice(0, i) === '/' || (i === 0)) {
+            byHash[href.slice(i + 1)] = link;
+        } else if (href === window.location.pathname) {
             link.classList.add('active');
         }
+    });
 
-        // Add click event listener to store scroll position and load content via AJAX
-        link.addEventListener('click', function (event) {
-            if (link.classList.contains('active')) {
-                event.preventDefault(); // Prevent default action for the active link
-                return;
-            }
+    var ids = Object.keys(byHash);
+    if (!ids.length || window.location.pathname !== '/') return;
 
-            sessionStorage.setItem('scrollPosition', window.scrollY);
-            event.preventDefault(); // Prevent default link behavior
-            const url = link.getAttribute('href');
+    function setActive(id) {
+        ids.forEach(function (k) { byHash[k].classList.toggle('active', k === id); });
+    }
 
-            // Fetch the new page content
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(html => {
-                    // Parse the HTML and extract the main content
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const newContent = doc.querySelector('main');
-
-                    if (newContent) {
-                        // Update the main content area
-                        document.querySelector('main').innerHTML = newContent.innerHTML;
-
-                        // Update the URL without reloading the page
-                        history.pushState(null, '', url);
-
-                        // Highlight the new active link
-                        document.querySelectorAll('.nav-link').forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        link.classList.add('active');
-
-                        // Restore scroll position after content update
-                        const scrollPosition = sessionStorage.getItem('scrollPosition');
-                        if (scrollPosition !== null) {
-                            window.scrollTo(0, parseInt(scrollPosition, 10));
-                            sessionStorage.removeItem('scrollPosition'); // Clear the stored position
-                        }
-                    } else {
-                        console.error('Error: Main content not found in the fetched HTML.');
-                    }
-                })
-                .catch(error => console.error('Error loading page:', error));
+    // Highlight the section nearest the top of the viewport (below the sticky header).
+    var sections = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+    var ticking = false;
+    function update() {
+        ticking = false;
+        var offset = 130;
+        var current = null;
+        sections.forEach(function (s) {
+            if (s.getBoundingClientRect().top - offset <= 0) current = s.id;
         });
-    });
-
-    // Handle back/forward navigation
-    window.addEventListener('popstate', function () {
-        const url = window.location.pathname;
-
-        // Fetch the new page content
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(html => {
-                // Parse the HTML and extract the main content
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const newContent = doc.querySelector('main');
-
-                if (newContent) {
-                    // Update the main content area
-                    document.querySelector('main').innerHTML = newContent.innerHTML;
-
-                    // Highlight the new active link
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === url) {
-                            link.classList.add('active');
-                        }
-                    });
-
-                    // Restore scroll position after content update
-                    const scrollPosition = sessionStorage.getItem('scrollPosition');
-                    if (scrollPosition !== null) {
-                        window.scrollTo(0, parseInt(scrollPosition, 10));
-                        sessionStorage.removeItem('scrollPosition'); // Clear the stored position
-                    }
-                } else {
-                    console.error('Error: Main content not found in the fetched HTML.');
-                }
-            })
-            .catch(error => console.error('Error loading page:', error));
-    });
+        setActive(current);
+    }
+    window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener('hashchange', update);
+    update();
 });
