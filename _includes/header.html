@@ -1,38 +1,28 @@
 <!-- _includes/header.html -->
 <header class="site-header">
     <div class="header-container">
-        <div class="logo-title">
+        <a href="/" class="logo-title" style="text-decoration: none; color: inherit;" aria-label="DataNova Consulting home">
             <div class="logo">
                 <img src="{{ '/assets/images/logo_color.svg' | relative_url }}" alt="DataNova Consulting Logo" width="60" height="60">
             </div>
             <h1 class="site-title">DataNova Consulting<span class="highlight">.</span></h1>
-        </div>
+        </a>
         <nav class="main-nav">
             <ul>
                 <li>
-                    <a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}" id="home-link">
-                        Home
-                    </a>
+                    <a href="/#how-it-works" class="nav-link" id="how-link">How It Works</a>
                 </li>
                 <li>
-                    <a href="/after-hours-receptionist.html" class="nav-link {% if page.url == '/after-hours-receptionist.html' %}active{% endif %}" id="receptionist-link">
-                        How It Works
-                    </a>
+                    <a href="/#pricing" class="nav-link" id="pricing-link">Pricing</a>
                 </li>
                 <li>
-                    <a href="/#pricing" class="nav-link" id="pricing-link">
-                        Pricing
-                    </a>
+                    <a href="/#faq" class="nav-link" id="faq-link">FAQ</a>
                 </li>
                 <li>
-                    <a href="tel:+13603996614" class="nav-link" id="demo-link" data-umami-event="demo-call">
-                        Demo: (360) 399-6614
-                    </a>
+                    <a href="tel:+13603996614" class="nav-link" id="demo-link" data-umami-event="demo-call">Demo: (360) 399-6614</a>
                 </li>
                 <li>
-                    <a href="/contact.html" class="nav-link {% if page.url == '/contact.html' %}active{% endif %}" id="contact-link">
-                        Contact
-                    </a>
+                    <a href="/#contact" class="nav-link" id="contact-link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -43,7 +33,14 @@
 </header>
 
 <script>
-    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-        document.querySelector('.main-nav').classList.toggle('show');
-    });
+    (function () {
+        var nav = document.querySelector('.main-nav');
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function () {
+            nav.classList.toggle('show');
+        });
+        // Same-page anchor taps: close the mobile menu so the section is visible.
+        nav.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () { nav.classList.remove('show'); });
+        });
+    })();
 </script>
