@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-        <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}after hours answering service HVAC, AI receptionist, workflow automation, Skagit County, Whatcom County, Snohomish County, Island County{% endif %}">
+        <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}after hours answering service HVAC, AI receptionist, contractor X-dates, Skagit County, Whatcom County, Snohomish County, Island County{% endif %}">
         {% if page.robots %}
         <meta name="robots" content="{{ page.robots }}">
         {% endif %}
@@ -45,14 +45,14 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo_color/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo_color/favicon-16x16.png">
 
-        <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}DataNova Consulting | After-Hours AI Receptionist and Workflow Automation{% endif %}">
-        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}After-hours AI receptionist for HVAC and trades ($299/mo, no setup fee) and fixed-fee workflow automation for small businesses in Washington.{% endif %}">
+        <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ site.url }}{{ page.url }}">
         <meta property="og:image" content="{{ site.url }}/assets/images/logo_color_black_white_fill.png">
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}DataNova Consulting | After-Hours AI Receptionist and Workflow Automation{% endif %}">
-        <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}After-hours AI receptionist for HVAC and trades ($299/mo, no setup fee) and fixed-fee workflow automation for small businesses in Washington.{% endif %}">
+        <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+        <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
         <meta name="twitter:image" content="{{ site.url }}/assets/images/logo_color_black_white_fill.png">
         <script type="application/ld+json">
         {
@@ -61,7 +61,7 @@
           "name": "DataNova Consulting",
           "url": "{{ site.url }}",
           "logo": "{{ site.url }}/assets/images/logo_color_black_white_fill.png",
-          "description": "Veteran-owned consultancy in Sedro-Woolley, Washington. After-hours AI receptionist for HVAC and trades, and fixed-fee workflow automation for small businesses.",
+          "description": "Veteran-owned consultancy in Sedro-Woolley, Washington. After-hours AI receptionist for HVAC and trades, and weekly contractor X-date lists for insurance agencies.",
           "sameAs": []
         }
         </script>
@@ -80,6 +80,6 @@
         {{ content }}
     </main>
     {% include footer.html %}
-    <script src="{{ '/highlight_button.js' | relative_url }}?v=2"></script>
+    <script src="{{ '/highlight_button.js' | relative_url }}?v=3"></script>
 </body>
 </html>

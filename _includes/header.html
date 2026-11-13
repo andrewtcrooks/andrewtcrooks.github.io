@@ -10,22 +10,14 @@
         <nav class="main-nav">
             <ul>
                 <li>
-                    <a href="/#how-it-works" class="nav-link" id="how-link">How It Works</a>
-                </li>
-                <li>
-                    <a href="/#pricing" class="nav-link" id="pricing-link">Pricing</a>
-                </li>
-                <li>
-                    <a href="/#faq" class="nav-link" id="faq-link">FAQ</a>
-                </li>
-                <li>
-                    <a href="tel:+13603996614" class="nav-link" id="demo-link" data-umami-event="demo-call">Demo: (360) 399-6614</a>
-                </li>
-                <li>
-                    <a href="/#contact" class="nav-link" id="contact-link">Contact</a>
+                    <a href="/ai-receptionist.html" class="nav-link" id="receptionist-link">AI Receptionist</a>
                 </li>
                 <li>
                     <a href="/contractor-xdates.html" class="nav-link" id="xdates-link">Contractor X-Dates</a>
+                </li>
+                <li>
+                    {% comment %}A page with its own contact section sets contact_href in its front matter.{% endcomment %}
+                    <a href="{{ page.contact_href | default: '/#contact' }}" class="nav-link" id="contact-link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -36,19 +28,17 @@
 </header>
 
 <style>
-    /* Tablet and narrow laptop widths: six nav items don't fit comfortably on one line
-       next to the logo, so use the hamburger menu up to 1150px (the stylesheet switches
-       at 768px). */
-    @media (min-width: 769px) and (max-width: 1150px) {
+    /* The logo and the three nav links need 692px on one line. With the row's 64px of
+       padding and up to 17px of scrollbar gutter they touch at about 773px, so the
+       hamburger menu stays until 800px, which leaves a gap of at least 28px between them
+       (the stylesheet switches at 768px). Three stacked links are 143px tall, well inside
+       the 300px open height. */
+    @media (min-width: 769px) and (max-width: 800px) {
         .header-container { flex-wrap: wrap; }
-        .main-nav { width: 100%; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; order: 3; }
-        .main-nav ul { flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+        .main-nav { width: 100%; max-height: 0; overflow: hidden; transition: var(--transition); order: 3; }
+        .main-nav.show { max-height: 300px; }
+        .main-nav ul { flex-direction: column; gap: var(--space-sm); margin-top: var(--space-md); }
         .mobile-menu-toggle { display: block; }
-    }
-    /* Open menu at every hamburger width: six stacked links need about 17.5rem, and the
-       stylesheet's 300px cap leaves too little room when text is enlarged. */
-    @media (max-width: 1150px) {
-        .main-nav.show { max-height: 20rem; }
     }
 </style>
 
