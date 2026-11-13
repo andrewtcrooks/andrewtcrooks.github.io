@@ -1,0 +1,25 @@
+# Products shown on the homepage (index.html): one card per entry, in this order.
+# A card says what the product is and who it is for, and links to the product's own
+# page. Prices and details belong on that page, not here.
+# sitemap.xml lists every url below, so a new product needs its page and one entry here.
+#
+#   name         card heading
+#   url          the product's page
+#   icon         Font Awesome solid icon name (the "fas" class is added by the template)
+#   description  what it is, one sentence
+#   audience     who it is for, shown after "For:"
+#   link_text    label of the card's one link
+
+- name: After-Hours AI Receptionist
+  url: /ai-receptionist.html
+  icon: fa-phone
+  description: Answers your phone after hours in your company's name, books the job on your calendar and emails you the details.
+  audience: HVAC, heating and plumbing companies in Skagit, Whatcom, Snohomish and Island counties.
+  link_text: See how it works
+
+- name: Contractor X-Dates
+  url: /contractor-xdates.html
+  icon: fa-calendar-day
+  description: A weekly list of licensed contractors in Skagit, Whatcom, Snohomish and Island counties whose liability policy expires in the next 90 days.
+  audience: Insurance agencies in Northwest Washington.
+  link_text: See what you get
