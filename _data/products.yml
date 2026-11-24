@@ -23,3 +23,10 @@
   description: A weekly list of licensed contractors in Skagit, Whatcom, Snohomish and Island counties whose liability policy expires in the next 90 days.
   audience: Insurance agencies in Northwest Washington.
   link_text: See what you get
+
+- name: Government and Defense
+  url: /government.html
+  icon: fa-landmark
+  description: Document processing, retrieval and AI systems that run on your own hardware, from a veteran-owned small business.
+  audience: Federal agencies, contracting officers and prime contractors.
+  link_text: See capabilities
