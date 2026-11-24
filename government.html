@@ -2,83 +2,252 @@
 layout: default
 title: Government and Defense | Private AI, Document Processing and Automation | DataNova Consulting
 description: DataNova Consulting LLC is a veteran-owned small business in Washington State that builds document processing, retrieval and AI systems that run on local hardware. UEI TUAFMNGTN7N6, CAGE 264M1.
-keywords: veteran-owned small business, SDVOSB, private AI, local LLM, retrieval-augmented generation, document processing, workflow automation, 541511, 541512, 541519, Washington State
+keywords: veteran-owned small business, SDVOSB, private AI, local LLM, retrieval-augmented generation, document processing, workflow automation, 541511, 541512, 541519, 541330, Washington State
+contact_href: "#contact"
 ---
 
-<div class="hero">
-    <h1>AI and document systems that run on your hardware</h1>
-    <p>DataNova Consulting LLC is a veteran-owned small business in Washington State. We build document processing, retrieval and language-model systems for environments where the data cannot leave the network, and we run them in production ourselves.</p>
-    <p><a class="cta" href="mailto:andrewtcrooks@datanovaconsulting.com?subject=Capability%20statement%20request">Request our capability statement</a></p>
+<style>
+    [id] { scroll-margin-top: 110px; }
+    .gov-hero h1, .gov-hero p { text-wrap: balance; }
+    .gov-hero { margin-bottom: var(--space-xl); }
+    .hero.gov-hero p.gov-eyebrow {
+        font-family: var(--font-mono); font-size: var(--text-sm); letter-spacing: 0.12em;
+        text-transform: uppercase; color: var(--stellar-gold); margin-bottom: var(--space-md);
+    }
+
+    /* Identifier strip */
+    .gov-ids {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md);
+        margin-bottom: var(--space-3xl);
+    }
+    .gov-id {
+        background: var(--space-medium); border: 1px solid var(--border-medium);
+        border-top: 2px solid var(--stellar-gold); border-radius: var(--radius-lg);
+        padding: var(--space-lg); text-align: center;
+    }
+    .gov-id-label {
+        font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--text-secondary); margin-bottom: var(--space-xs);
+    }
+    .gov-id-value {
+        font-family: var(--font-mono); font-size: var(--text-xl); font-weight: 600;
+        color: var(--text-bright); overflow-wrap: anywhere;
+    }
+
+    .gov-section { margin-bottom: var(--space-3xl); }
+    .gov-section > h2 { text-align: center; margin-bottom: var(--space-sm); }
+    .gov-section > .section-intro { margin-bottom: var(--space-xl); }
+
+    /* Capability and system cards */
+    .gov-grid { display: grid; gap: var(--space-lg); }
+    .gov-grid.three { grid-template-columns: repeat(3, 1fr); }
+    .gov-grid.two { grid-template-columns: repeat(2, 1fr); }
+    .gov-card {
+        background: var(--space-medium); border: 1px solid var(--border-medium);
+        border-radius: var(--radius-xl); padding: var(--space-xl);
+        transition: var(--transition);
+    }
+    .gov-card:hover { border-color: var(--border-accent); }
+    .gov-card .gov-icon {
+        width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center;
+        font-size: var(--text-xl); color: var(--stellar-gold); background: var(--stellar-glow);
+        border: 1px solid var(--border-accent); border-radius: var(--radius-lg);
+        margin-bottom: var(--space-md);
+    }
+    .gov-card h3 { color: var(--text-bright); font-size: var(--text-xl); margin: 0 0 var(--space-sm); }
+    .gov-card p { color: var(--text-secondary); line-height: var(--leading-relaxed); margin: 0; }
+    .gov-tag {
+        display: inline-block; font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--stellar-gold); margin-bottom: var(--space-sm);
+    }
+    .gov-stack {
+        margin-top: var(--space-md) !important; padding-top: var(--space-md);
+        border-top: 1px solid var(--border-subtle);
+        font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted) !important;
+    }
+    .gov-note { text-align: center; color: var(--text-secondary); max-width: 720px; margin: 0 auto var(--space-xl); }
+
+    /* Company data and NAICS tables */
+    .gov-table { width: 100%; border-collapse: collapse; }
+    .gov-table td {
+        padding: var(--space-sm) 0; vertical-align: top;
+        border-bottom: 1px solid var(--border-subtle); color: var(--text-primary);
+    }
+    .gov-table tr:last-child td { border-bottom: 0; }
+    .gov-table td:first-child { color: var(--text-secondary); width: 34%; padding-right: var(--space-md); }
+    .gov-table.codes td:first-child {
+        font-family: var(--font-mono); font-weight: 600; color: var(--stellar-gold); width: 5.5rem;
+    }
+    .gov-primary { color: var(--text-muted); font-size: var(--text-sm); }
+
+    .contact-options h2 { text-align: center; }
+    .contact-grid > .contact-card { min-width: 0; }
+    .contact-card .cta { white-space: normal; }
+
+    @media (max-width: 900px) {
+        .gov-grid.three { grid-template-columns: repeat(2, 1fr); }
+        .gov-ids { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+        .gov-grid.three, .gov-grid.two { grid-template-columns: 1fr; }
+        .gov-table td:first-child { width: 40%; }
+        .gov-id { padding: var(--space-md) var(--space-sm); }
+        .gov-id-value { font-size: var(--text-base); }
+    }
+</style>
+
+<div class="hero gov-hero" id="top">
+    <p class="gov-eyebrow">Government and defense</p>
+    <h1>AI and document systems that run on your hardware.</h1>
+    <p>DataNova Consulting LLC is a veteran-owned small business in Washington State. We build retrieval, document processing and language-model systems for networks the data cannot leave.</p>
+    <div class="hero-cta-group">
+        <a href="/assets/docs/DataNova-Capability-Statement.pdf" class="cta cta-primary cta-large" data-umami-event="capability-statement">
+            <i class="fas fa-file-pdf"></i> Capability statement (PDF)
+        </a>
+        <a href="#contact" class="cta cta-secondary">Contact</a>
+    </div>
 </div>
 
-<section class="faq-section">
-    <div class="container" style="max-width: 800px;">
-        <div class="faq-grid" style="grid-template-columns: 1fr;">
+<div class="gov-ids">
+    <div class="gov-id">
+        <div class="gov-id-label">UEI</div>
+        <div class="gov-id-value">TUAFMNGTN7N6</div>
+    </div>
+    <div class="gov-id">
+        <div class="gov-id-label">CAGE</div>
+        <div class="gov-id-value">264M1</div>
+    </div>
+    <div class="gov-id">
+        <div class="gov-id-label">Primary NAICS</div>
+        <div class="gov-id-value">541511</div>
+    </div>
+    <div class="gov-id">
+        <div class="gov-id-label">SAM.gov</div>
+        <div class="gov-id-value">Active</div>
+    </div>
+</div>
 
-            <div class="faq-item">
-                <h3>Company data</h3>
-                <p>
-                    <strong>Legal name:</strong> DataNova Consulting LLC<br>
-                    <strong>UEI:</strong> TUAFMNGTN7N6<br>
-                    <strong>CAGE:</strong> 264M1<br>
-                    <strong>SAM.gov:</strong> Active, All Awards<br>
-                    <strong>Size:</strong> Small business<br>
-                    <strong>Status:</strong> Veteran-owned, owner-operated. Washington State Department of Veterans Affairs certified Veteran-Owned Business (certificate WDVADCON26). SBA SDVOSB certification pending; application submitted November 2026.<br>
-                    <strong>DoD systems:</strong> Registered in PIEE (Solicitation Module, WAWF, SPRS)<br>
-                    <strong>Established:</strong> 2024, Washington State<br>
-                    <strong>Location:</strong> Sedro-Woolley, Washington. Remote nationwide; on site in Washington.
-                </p>
+<section class="gov-section" id="capabilities">
+    <h2>What we build</h2>
+    <p class="section-intro">Software that keeps working when the network is closed or gone.</p>
+    <div class="gov-grid three">
+        <div class="gov-card">
+            <div class="gov-icon"><i class="fas fa-microchip"></i></div>
+            <h3>Local language models</h3>
+            <p>Speech-to-text, embedding and text-generation models on laptops and small servers, with no network connection.</p>
+        </div>
+        <div class="gov-card">
+            <div class="gov-icon"><i class="fas fa-file-alt"></i></div>
+            <h3>Document retrieval</h3>
+            <p>Scanned and digital records ingested, indexed and searched by meaning, with answers cited to the source page.</p>
+        </div>
+        <div class="gov-card">
+            <div class="gov-icon"><i class="fas fa-project-diagram"></i></div>
+            <h3>Workflow automation</h3>
+            <p>Python, REST APIs and scheduled jobs that move data between existing systems and end manual re-entry.</p>
+        </div>
+        <div class="gov-card">
+            <div class="gov-icon"><i class="fas fa-server"></i></div>
+            <h3>Self-hosted infrastructure</h3>
+            <p>Linux, Docker, PostgreSQL and vector databases with monitoring, backups and secure remote access.</p>
+        </div>
+        <div class="gov-card">
+            <div class="gov-icon"><i class="fas fa-robot"></i></div>
+            <h3>Controlled AI agents</h3>
+            <p>Model routing, usage limits, audit logging and long-term memory, with human approval on outbound actions.</p>
+        </div>
+        <div class="gov-card">
+            <div class="gov-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Teaming</h3>
+            <p>We subcontract to primes and team with other small businesses. Remote nationwide, on site in Washington.</p>
+        </div>
+    </div>
+</section>
+
+<section class="gov-section" id="systems">
+    <h2>Systems we built and run</h2>
+    <p class="gov-note">We are a young firm without government past performance. Each system below was designed and built by DataNova and is in use today.</p>
+    <div class="gov-grid two">
+        <div class="gov-card">
+            <span class="gov-tag">Offline AI on a laptop</span>
+            <h3>Therapize</h3>
+            <p>A desktop application that records a therapy session, transcribes it and writes structured clinical notes. Every model runs on the user's own computer. Nothing leaves the device, and it works with no network connection.</p>
+            <p class="gov-stack">Local speech-to-text · local language model · desktop application</p>
+        </div>
+        <div class="gov-card">
+            <span class="gov-tag">Document intelligence</span>
+            <h3>Private document pipeline</h3>
+            <p>Intake of scanned and digital documents, text extraction, classification, and question answering over the full set. Store and search index run on private infrastructure; extraction and language models are chosen per deployment, including fully local.</p>
+            <p class="gov-stack">Paperless-ngx · OCR · Qdrant vector search · Docker</p>
+        </div>
+        <div class="gov-card">
+            <span class="gov-tag">AI operations</span>
+            <h3>Rook CEO</h3>
+            <p>Software agents that run scheduled research, qualification and reporting for a working business, with routing between local and commercial models, per-task usage limits, a budget guard and long-term memory.</p>
+            <p class="gov-stack">Agent scheduling · model routing · usage metering · human approval</p>
+        </div>
+        <div class="gov-card">
+            <span class="gov-tag">Infrastructure</span>
+            <h3>Self-hosted operations</h3>
+            <p>More than 50 monitored services running DataNova's own business: ERP, mail, workflow automation, analytics and a vector database, with backups and secure remote access.</p>
+            <p class="gov-stack">ERPNext · n8n · PostgreSQL · Docker · Tailscale</p>
+        </div>
+    </div>
+</section>
+
+<section class="gov-section" id="company">
+    <h2>Company data</h2>
+    <p class="section-intro">For contracting officers, small business offices and primes.</p>
+    <div class="gov-grid two">
+        <div class="gov-card">
+            <table class="gov-table">
+                <tr><td>Legal name</td><td>DataNova Consulting LLC</td></tr>
+                <tr><td>UEI</td><td>TUAFMNGTN7N6</td></tr>
+                <tr><td>CAGE</td><td>264M1</td></tr>
+                <tr><td>SAM.gov</td><td>Active, All Awards</td></tr>
+                <tr><td>Size</td><td>Small business</td></tr>
+                <tr><td>Ownership</td><td>Veteran-owned, owner-operated. WDVA-certified Veteran-Owned Business (WA, certificate WDVADCON26). SBA SDVOSB certification pending.</td></tr>
+                <tr><td>DoD systems</td><td>PIEE: Solicitation Module, WAWF, SPRS</td></tr>
+                <tr><td>Established</td><td>2024, Washington State</td></tr>
+                <tr><td>Location</td><td>Sedro-Woolley, Washington</td></tr>
+            </table>
+        </div>
+        <div class="gov-card">
+            <table class="gov-table codes">
+                <tr><td>541511</td><td>Custom Computer Programming Services <span class="gov-primary">(primary)</span></td></tr>
+                <tr><td>541512</td><td>Computer Systems Design Services</td></tr>
+                <tr><td>541519</td><td>Other Computer Related Services</td></tr>
+                <tr><td>541330</td><td>Engineering Services</td></tr>
+                <tr><td>518210</td><td>Computing Infrastructure, Data Processing and Web Hosting</td></tr>
+                <tr><td>541611</td><td>Administrative and General Management Consulting</td></tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="contact-options" id="contact">
+    <div class="container">
+        <h2>Point of contact</h2>
+        <p class="section-intro">Andrew Crooks, Owner. Replies within one business day.</p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <h3>Email</h3>
+                <p>andrewtcrooks@datanovaconsulting.com</p>
+                <a href="mailto:andrewtcrooks@datanovaconsulting.com" class="cta cta-primary">Email Andrew</a>
             </div>
-
-            <div class="faq-item">
-                <h3>NAICS codes</h3>
-                <p>
-                    <strong>541511</strong> Custom Computer Programming Services (primary)<br>
-                    <strong>541512</strong> Computer Systems Design Services<br>
-                    <strong>541519</strong> Other Computer Related Services<br>
-                    <strong>541330</strong> Engineering Services<br>
-                    <strong>518210</strong> Computing Infrastructure, Data Processing and Web Hosting<br>
-                    <strong>541611</strong> Administrative and General Management Consulting
-                </p>
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <h3>Phone</h3>
+                <p>(425) 626-6735</p>
+                <a href="tel:+14256266735" class="cta cta-secondary">Call</a>
             </div>
-
-            <div class="faq-item">
-                <h3>What we do</h3>
-                <ul class="sprint-checklist">
-                    <li><i class="fas fa-check"></i> <strong>Local language models.</strong> Speech-to-text, embedding and text-generation models deployed on laptops, workstations and small servers, running with no network connection.</li>
-                    <li><i class="fas fa-check"></i> <strong>Document ingestion and retrieval.</strong> Scanned and digital records captured, text extracted, indexed for full-text and meaning-based search, and answered against with citations back to the source page.</li>
-                    <li><i class="fas fa-check"></i> <strong>Workflow automation and integration.</strong> Python, REST APIs and scheduled jobs that move data between existing systems and end manual re-entry.</li>
-                    <li><i class="fas fa-check"></i> <strong>Self-hosted infrastructure.</strong> Linux, Docker, PostgreSQL, vector databases, monitoring, backups and secure remote access.</li>
-                    <li><i class="fas fa-check"></i> <strong>AI agent systems with controls.</strong> Model routing, usage limits, audit logging, long-term memory and human approval before anything leaves the system.</li>
-                </ul>
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-file-pdf"></i></div>
+                <h3>Capability statement</h3>
+                <p>One page, with NAICS codes, UEI and CAGE.</p>
+                <a href="/assets/docs/DataNova-Capability-Statement.pdf" class="cta cta-secondary" data-umami-event="capability-statement">Download PDF</a>
             </div>
-
-            <div class="faq-item">
-                <h3>Systems we built and operate</h3>
-                <p>We are a young firm without government past performance. Each system below was designed and built by DataNova and is in use today.</p>
-                <p><strong>Therapize: language models on a laptop, offline.</strong> A desktop application for therapists that records a session, transcribes the audio and writes structured clinical notes. Transcription and note generation both run on models installed on the user's own computer. No audio or text leaves the device, and the application works with no network connection.</p>
-                <p><strong>Private document pipeline.</strong> Automatic intake of scanned and digital documents, text extraction, classification, extraction of dates, parties and key facts, and question answering over the full set using vector search. The document store and search index run on private infrastructure. Text-extraction and language models are chosen per deployment, including fully local models where data cannot leave the network.</p>
-                <p><strong>Rook CEO: an AI operations platform.</strong> Software agents that run scheduled research, qualification and reporting tasks for a working business, with routing between local and commercial models, per-task usage limits, a budget guard, an external long-term memory service, and human approval on every outbound action.</p>
-                <p><strong>Self-hosted operations.</strong> More than 50 monitored services (ERP, mail, workflow automation, analytics, vector database) with backups and secure remote access, running DataNova's own business.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How we work</h3>
-                <p><strong>Data stays where it is.</strong> We design for open-source, self-hosted components first, so a deployment adds no new cloud vendor unless the customer chooses one.</p>
-                <p><strong>Small first milestones.</strong> Written scope and price agreed up front, with a working system at the end of each milestone.</p>
-                <p><strong>One accountable owner.</strong> The person who scopes the work builds it and answers for it.</p>
-                <p><strong>Teaming.</strong> We subcontract to primes and team with other small businesses on larger efforts.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Point of contact</h3>
-                <p>
-                    Andrew Crooks, Owner<br>
-                    <a href="mailto:andrewtcrooks@datanovaconsulting.com">andrewtcrooks@datanovaconsulting.com</a><br>
-                    (425) 626-6735
-                </p>
-            </div>
-
         </div>
     </div>
 </section>

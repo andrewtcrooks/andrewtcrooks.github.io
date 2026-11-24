@@ -16,6 +16,9 @@
                     <a href="/contractor-xdates.html" class="nav-link" id="xdates-link">Contractor X-Dates</a>
                 </li>
                 <li>
+                    <a href="/government.html" class="nav-link" id="government-link">Government</a>
+                </li>
+                <li>
                     {% comment %}A page with its own contact section sets contact_href in its front matter.{% endcomment %}
                     <a href="{{ page.contact_href | default: '/#contact' }}" class="nav-link" id="contact-link">Contact</a>
                 </li>
@@ -28,12 +31,12 @@
 </header>
 
 <style>
-    /* The logo and the three nav links need 692px on one line. With the row's 64px of
-       padding and up to 17px of scrollbar gutter they touch at about 773px, so the
-       hamburger menu stays until 800px, which leaves a gap of at least 28px between them
-       (the stylesheet switches at 768px). Three stacked links are 143px tall, well inside
+    /* The logo and the four nav links need about 830px on one line. With the row's 64px
+       of padding and up to 17px of scrollbar gutter they touch at about 910px, so the
+       hamburger menu stays until 940px, which leaves a gap of about 30px between them
+       (the stylesheet switches at 768px). Four stacked links are about 190px tall, inside
        the 300px open height. */
-    @media (min-width: 769px) and (max-width: 800px) {
+    @media (min-width: 769px) and (max-width: 940px) {
         .header-container { flex-wrap: wrap; }
         .main-nav { width: 100%; max-height: 0; overflow: hidden; transition: var(--transition); order: 3; }
         .main-nav.show { max-height: 300px; }
